@@ -1,10 +1,23 @@
 header {
   display: flex;
   justify-content: space-between;
-  background-color: orange;
-  padding: 12px;
+  background-color: #0E181B;
+  font-size: 14px;
+  color: white;
+  padding: 8px;
 
   div {
-    a { padding: 4px; }
+    a { 
+      padding: 4px;
+      text-decoration: none;
+      color: #f7f5ed;
+    
+      &:hover {
+        text-decoration: underline;
+      }
+      &:visited {
+        color: #f7f5ed;
+      }
+    }
   }
 }

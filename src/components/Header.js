@@ -6,16 +6,16 @@ function Header() {
   return (
     <header>
       <div>
-        <Link to="/"> Home </Link>
+        <Link to="/"> HOME </Link>
       </div>
       <div>
-        <Link to="/products"> Shop </Link>
-        <Link to="/about"> About </Link>
-        <Link to="/contact"> Contact </Link>
+        <Link to="/products"> SHOP </Link>
+        <Link to="/about"> ABOUT </Link>
+        <Link to="/contact"> CONTACT </Link>
       </div>
       <div>
-        <Link to="/error"> Search </Link>
-        <Link to="/error"> Shopping Cart </Link>
+        <Link to="/error"> SEARCH </Link>
+        <Link to="/error"> CART </Link>
       </div>
     </header>
   );
