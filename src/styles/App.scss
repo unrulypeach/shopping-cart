@@ -21,3 +21,12 @@
   }
 }
 
+.product-tile {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.tile-item {
+  display: flex;
+  flex-direction: column;
+}

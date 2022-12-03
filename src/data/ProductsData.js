@@ -9,6 +9,8 @@ import nirvNvmAlb from './product-images/nirvana-nevermind-album.jpg';
 import nirvNvmCas from './product-images/nirvana-nevermind-casette.webp';
 import bhDcAlb from './product-images/beachhouse-dc-album.webp';
 import bhDcCas from './product-images/beachhouse-dc-casette.jpg';
+import shinsWtnaAlb from './product-images/shins-wtna-album.webp';
+import shinsWtnaCas from './product-images/shins-wtna-casette.webp';
 
 const ProductsData = [
   {
@@ -61,7 +63,27 @@ const ProductsData = [
     price: 12.99,
     genre: 'Indie-pop',
   },
+  {
+    id: uniqid(),
+    name: 'Wincing the Night Away',
+    artist: 'The Shins',
+    pic: [shinsWtnaAlb, shinsWtnaCas],
+    alt: ['illustration of blobs with balck dots', 'casette with case'],
+    info: '',
+    price: 8.99,
+    genre: 'Indie Rock',
+  },
   /* {
+    id: uniqid(),
+    name:
+    artist:
+    pic: [],
+    alt: [],
+    info:
+    price:
+    genre:
+  },
+   {
     id: uniqid(),
     name:
     artist:

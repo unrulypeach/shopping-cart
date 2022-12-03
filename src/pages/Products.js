@@ -4,17 +4,24 @@ import ProductsData from '../data/ProductsData';
 
 function Products() {
   return (
-    <div>
-      {
-        ProductsData.map((el) => (
-          <Item
-            key={el.id}
-            src={el.pic[0]}
-            name={el.name}
-          />
-        ))
-      }
-    </div>
+    <>
+      <h1> Music </h1>
+      <div
+        className="product-tile"
+      >
+        {
+          ProductsData.map((el) => (
+            <Item
+              key={el.id}
+              src={el.pic[0]}
+              name={el.name}
+              artist={el.artist}
+              price={el.price}
+            />
+          ))
+        }
+      </div>
+    </>
   );
 }
 
