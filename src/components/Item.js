@@ -1,8 +1,9 @@
+/* eslint-disable react/forbid-prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 
 function Item({
-  src, name, artist, descript, price,
+  src, name, artist, alt, price,
 }) {
   return (
     <div
@@ -10,7 +11,7 @@ function Item({
     >
       <img
         src={src}
-        alt={descript}
+        alt={alt}
         width="200px"
       />
       <span>{name}</span>
@@ -27,7 +28,7 @@ Item.propTypes = {
   src: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   artist: PropTypes.string.isRequired,
-  descript: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
 };
 

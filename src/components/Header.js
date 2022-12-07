@@ -14,8 +14,8 @@ function Header() {
         <Link to="/contact"> CONTACT </Link>
       </div>
       <div>
-        <Link to="/error"> SEARCH </Link>
-        <Link to="/error"> CART </Link>
+        <Link to="/search"> SEARCH </Link>
+        <Link to="/cart"> CART </Link>
       </div>
     </header>
   );

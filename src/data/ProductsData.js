@@ -58,7 +58,7 @@ const ProductsData = [
     name: 'Depression Cherry',
     artist: 'Beach House',
     pic: [bhDcAlb, bhDcCas],
-    alt: [],
+    alt: ['red cover with album title and artist name'],
     info: '',
     price: 12.99,
     genre: 'Indie-pop',
