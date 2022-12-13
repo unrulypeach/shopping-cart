@@ -24,6 +24,7 @@ function ItemPg() {
         />
         <button
           type="button"
+          onClick={}
         >
           Buy
         </button>
