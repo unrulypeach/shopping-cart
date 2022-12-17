@@ -1,6 +1,14 @@
-import React from 'react';
+/* eslint-disable react/prop-types */
+import React, { useEffect, useState } from 'react';
 
-export default function Cart() {
+export default function Cart({ cart }) {
+  const [subTotPrice, setSubTotPrice] = useState(0);
+  // const [taxAmt, setTaxAmt] = useState(0);
+  // const [totalPrice, setTotalPrice] = useState(0);
+
+  useEffect(() => {
+    setSubTotPrice(cart.reduce((p, c) => p + (c.itm.price * c.qty), 0));
+  });
   return (
     <div>
       <h1> your cart </h1>
@@ -23,9 +31,18 @@ export default function Cart() {
       <div
         className="cart-summary"
       >
-        <h2>subtotal:</h2>
-        <h2> Tax: </h2>
-        <h2> Total:</h2>
+        <h2>
+          subtotal:
+          {Math.round(subTotPrice * 100) / 100}
+        </h2>
+        <h2>
+          Tax:
+          {Math.round(subTotPrice * 0.13 * 100) / 100}
+        </h2>
+        <h2>
+          Total:
+          {Math.round(subTotPrice * 1.13 * 100) / 100}
+        </h2>
         <button
           type="button"
         >

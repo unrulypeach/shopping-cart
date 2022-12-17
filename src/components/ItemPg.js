@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 
-function ItemPg() {
+// eslint-disable-next-line react/prop-types
+export default function ItemPg({ addItem }) {
+  const ref = useRef(null);
   const { state } = useLocation();
-  const location = useLocation();
+  // const location = useLocation();
   // eslint-disable-next-line no-console
-  console.log(location);
   return state ? (
     <div>
       <img
@@ -14,17 +15,26 @@ function ItemPg() {
       />
       <div>
         <h1>{state.name}</h1>
-        <h2>{state.artist}</h2>
-        <p>{state.price}</p>
+        <h2>
+          by
+          {' '}
+          {state.artist}
+        </h2>
+        <p>
+          $
+          {state.price}
+        </p>
       </div>
       <div>
         <input
           type="number"
           placeholder="quantity"
+          ref={ref}
         />
         <button
           type="button"
-          onClick={}
+          // eslint-disable-next-line no-console
+          onClick={() => addItem(state, ref.current.value)}
         >
           Buy
         </button>
@@ -32,5 +42,3 @@ function ItemPg() {
     </div>
   ) : 'Item not found';
 }
-
-export default ItemPg;
