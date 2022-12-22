@@ -23,9 +23,10 @@ function App() {
     // change number next to cart icon
     if (cart.length > 0) {
       setTotalQty(cart.reduce((p, c) => p + Number(c.qty), 0));
+    } else {
+      setTotalQty(0);
     }
-    // eslint-disable-next-line no-console
-    console.log(totalQty);
+
     // popup/signal to show item added?
   }, [cart]);
 

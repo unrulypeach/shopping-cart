@@ -41,7 +41,7 @@ export default function Cart({
               {item.itm.name}
             </span>
             <span>
-              {item.itm.price}
+              {(item.itm.price).toFixed(2)}
             </span>
             <span>
               <button
@@ -59,7 +59,7 @@ export default function Cart({
               </button>
             </span>
             <span>
-              {item.itm.price * item.qty}
+              {(Math.round(item.itm.price * item.qty * 100) / 100).toFixed(2)}
             </span>
             <button
               type="button"
@@ -76,15 +76,15 @@ export default function Cart({
       >
         <h2>
           subtotal:
-          {Math.round(subTotPrice * 100) / 100}
+          {(Math.round(subTotPrice * 100) / 100).toFixed(2)}
         </h2>
         <h2>
           Tax:
-          {Math.round(subTotPrice * 0.13 * 100) / 100}
+          {(Math.round(subTotPrice * 0.13 * 100) / 100).toFixed(2)}
         </h2>
         <h2>
           Total:
-          {Math.round(subTotPrice * 1.13 * 100) / 100}
+          {(Math.round(subTotPrice * 1.13 * 100) / 100).toFixed(2)}
         </h2>
         <button
           type="button"

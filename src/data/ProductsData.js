@@ -11,6 +11,11 @@ import bhDcAlb from './product-images/beachhouse-dc-album.webp';
 import bhDcCas from './product-images/beachhouse-dc-casette.jpg';
 import shinsWtnaAlb from './product-images/shins-wtna-album.webp';
 import shinsWtnaCas from './product-images/shins-wtna-casette.webp';
+import bohCtbAlb from './product-images/boh-ceasetobegin-album.webp';
+import iawOendAlb from './product-images/iaw-ourendlessnumbereddays-album.webp';
+import iawTsdAlb from './product-images/iaw-theshepardsdog-album.webp';
+import tpsGuAlb from './product-images/tps-giveup-album.webp';
+import tpsGuCas from './product-images/tps-giveup-casette.webp';
 
 const ProductsData = [
   {
@@ -59,7 +64,7 @@ const ProductsData = [
     artist: 'Beach House',
     pic: [bhDcAlb, bhDcCas],
     alt: ['red cover with album title and artist name'],
-    info: '',
+    info: 'Depression Cherry is the fifth studio album by the American dream pop duo Beach House. It was co-produced by the group and Chris Coady, and was released on August 28, 2015, by Sub Pop in the US, Bella Union in Europe, Mistletone Records in Australia, Hostess Entertainment in Japan and Arts & Crafts in Mexico.',
     price: 12.99,
     genre: 'Indie-pop',
   },
@@ -69,21 +74,51 @@ const ProductsData = [
     artist: 'The Shins',
     pic: [shinsWtnaAlb, shinsWtnaCas],
     alt: ['illustration of blobs with balck dots', 'casette with case'],
-    info: '',
+    info: 'Wincing the Night Away is the third studio album by the indie rock group The Shins. It was released by Sub Pop Records on January 23, 2007. It is the band\'s third album, and the last under their contract with Sub Pop.',
     price: 8.99,
     genre: 'Indie Rock',
   },
-  /* {
+  {
     id: uniqid(),
-    name:
-    artist:
-    pic: [],
-    alt: [],
-    info:
-    price:
-    genre:
+    name: 'Cease to Begin',
+    artist: 'Band of Horses',
+    pic: [bohCtbAlb],
+    alt: ['crescent moon behind clouds at night over water with words band of horses'],
+    info: 'Cease to Begin is the second album by Band of Horses, released on October 9, 2007. This album solidified the band\'s sound and was a critical and commercial success, peaking at number 35 on the US Billboard 200 chart. The singles \"Is There a Ghost\" and "No One\'s Gonna Love You\" appear on the album.',
+    price: 13.74,
+    genre: 'Indie Rock',
   },
-   {
+  {
+    id: uniqid(),
+    name: 'Our Endless Numbered Days',
+    artist: 'Iron and Wine',
+    pic: [iawOendAlb],
+    alt: ['illustration of man with beard laying on grass'],
+    info: 'Our Endless Numbered Days is the second full-length album from Iron & Wine. Released on March 23, 2004 on Sub Pop, it was the first non-solo effort by Sam Beam under his Iron & Wine moniker. Limited edition copies of the vinyl LP came with a bonus 7" vinyl single.',
+    price: 15.62,
+    genre: 'Indie Folk',
+  },
+  {
+    id: uniqid(),
+    name: 'The Shepard\'s Dog',
+    artist: 'Iron and Wine',
+    pic: [iawTsdAlb],
+    alt: ['illustration of dog with title and artist name'],
+    info: 'The Shepherd\'s Dog is the third full-length studio album by Iron & Wine, released on September 25, 2007. If bought at select retailers or if pre-ordered through Sub Pop, the album comes with a bonus disc featuring two unreleased tracks.',
+    price: 12.99,
+    genre: 'Indie Folk',
+  },
+  {
+    id: uniqid(),
+    name: 'Give Up',
+    artist: 'The Postal Service',
+    pic: [tpsGuAlb, tpsGuCas],
+    alt: ['picture of bedpost with artist and title', 'red casette and casette box with album picture'],
+    info: 'Give Up is the only studio album by American electronic duo The Postal Service, released on February 18, 2003, by Sub Pop Records.',
+    price: 12.99,
+    genre: 'Indie Pop',
+  },
+  /*  {
     id: uniqid(),
     name:
     artist:

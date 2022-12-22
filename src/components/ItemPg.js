@@ -8,7 +8,7 @@ export default function ItemPg({ addItem }) {
   // const location = useLocation();
   // eslint-disable-next-line no-console
   return state ? (
-    <div>
+    <div className="item-content">
       <img
         src={state.pic[0]}
         alt={state.alt[0]}
@@ -24,8 +24,6 @@ export default function ItemPg({ addItem }) {
           $
           {state.price}
         </p>
-      </div>
-      <div>
         <input
           type="number"
           placeholder="quantity"
@@ -38,6 +36,13 @@ export default function ItemPg({ addItem }) {
         >
           Buy
         </button>
+      </div>
+      <div className="item-description">
+        <h3>DESCRIPTION</h3>
+        <hr />
+        <p>
+          {state.info}
+        </p>
       </div>
     </div>
   ) : 'Item not found';

@@ -10,12 +10,16 @@ function Item({
       className="tile-item"
     >
       <img
+        className="product-tile-pic"
         src={src}
         alt={alt}
         width="200px"
       />
-      <span>{name}</span>
-      <span>{artist}</span>
+      <span>
+        {`${name} `}
+        -
+        {` ${artist}`}
+      </span>
       <span>
         {price}
         $

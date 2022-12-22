@@ -21,6 +21,25 @@
   }
 }
 
+.item-content {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  img {
+    padding-left: 20vw;
+  }
+
+  button {
+    display: block;
+  }
+
+  .item-description {
+    grid-area: 2/1/2/3;
+    padding: 0 20vw;
+  }
+}
+
 .cart-item {
   display: flex;
 }
@@ -39,15 +58,27 @@
     flex: 1 1 0;
   }
 }
+
 .cart-summary {
   float: right;
   border: solid 1px black;
   width: 50%;
 }
 
+.sortby-container {
+  float: right;
+}
+
 .product-tile {
+  padding-left: 25vw;
+  max-width: 50vw;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+
+  .product-tile-pic {
+    width: 100%;
+  }
 }
 
 .tile-item {
