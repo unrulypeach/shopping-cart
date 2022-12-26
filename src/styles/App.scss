@@ -25,6 +25,7 @@
   margin-top: 50px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 20px;
 
   img {
     max-width: 400px;
@@ -73,9 +74,8 @@
 
 .product-tile {
   padding-left: 25vw;
-  max-width: 50vw;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(150px, 250px));
   gap: 10px;
 
   .product-tile-pic {

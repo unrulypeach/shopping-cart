@@ -6,17 +6,20 @@ import ProductsData from '../data/ProductsData';
 function Products() {
   return (
     <>
-      <h1> Music </h1>
-      <div className="sortby-container">
-        <label htmlFor="sortby">
-          Sort by:
-          <select name="sortby">
-            <option value="Lowest Price">Lowest Price</option>
-            <option value="Highest Price">Highest Price</option>
-            <option value="Newest">Newest</option>
-          </select>
-        </label>
+      <div>
+        <h1> Music </h1>
+        <div className="sortby-container">
+          <label htmlFor="sortby">
+            Sort by:
+            <select name="sortby">
+              <option value="Lowest Price">Lowest Price</option>
+              <option value="Highest Price">Highest Price</option>
+              <option value="Newest">Newest</option>
+            </select>
+          </label>
+        </div>
       </div>
+
       <div
         className="product-tile"
       >

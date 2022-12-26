@@ -1,12 +1,11 @@
 import React, { useRef } from 'react';
+import PropTypes from 'prop-types';
 import { useLocation } from 'react-router-dom';
 
-// eslint-disable-next-line react/prop-types
 export default function ItemPg({ addItem }) {
   const ref = useRef(null);
   const { state } = useLocation();
-  // const location = useLocation();
-  // eslint-disable-next-line no-console
+
   return state ? (
     <div className="item-content">
       <img
@@ -47,3 +46,7 @@ export default function ItemPg({ addItem }) {
     </div>
   ) : 'Item not found';
 }
+
+ItemPg.propTypes = {
+  addItem: PropTypes.func.isRequired,
+};
