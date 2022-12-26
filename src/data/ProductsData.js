@@ -84,7 +84,7 @@ const ProductsData = [
     artist: 'Band of Horses',
     pic: [bohCtbAlb],
     alt: ['crescent moon behind clouds at night over water with words band of horses'],
-    info: 'Cease to Begin is the second album by Band of Horses, released on October 9, 2007. This album solidified the band\'s sound and was a critical and commercial success, peaking at number 35 on the US Billboard 200 chart. The singles \"Is There a Ghost\" and "No One\'s Gonna Love You\" appear on the album.',
+    info: 'Cease to Begin is the second album by Band of Horses, released on October 9, 2007. This album solidified the band\'s sound and was a critical and commercial success, peaking at number 35 on the US Billboard 200 chart. The singles "Is There a Ghost" and "No One\'s Gonna Love You" appear on the album.',
     price: 13.74,
     genre: 'Indie Rock',
   },

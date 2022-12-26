@@ -10,7 +10,7 @@ export default function Cart({
   useEffect(() => {
     setSubTotPrice(cart.reduce((p, c) => p + (c.itm.price * c.qty), 0));
   });
-  return (
+  return cart.length > 0 ? (
     <div>
       <h1> your cart </h1>
       <div
@@ -94,5 +94,5 @@ export default function Cart({
       </div>
 
     </div>
-  );
+  ) : 'Start shopping now!';
 }
