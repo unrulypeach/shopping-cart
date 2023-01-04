@@ -94,5 +94,5 @@ export default function Cart({
       </div>
 
     </div>
-  ) : 'Start shopping now!';
+  ) : <div className="empty-cart">Your cart is empty. Start shopping now!</div>;
 }

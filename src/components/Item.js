@@ -15,14 +15,14 @@ function Item({
         alt={alt}
         width="200px"
       />
-      <span>
-        {`${name} `}
+      <span className="title">
+        {` ${artist.toUpperCase()} `}
         -
-        {` ${artist}`}
+        {` ${name.toLowerCase()} `}
       </span>
-      <span>
-        {price}
+      <span className="price">
         $
+        {price.toFixed(2)}
       </span>
     </div>
   );

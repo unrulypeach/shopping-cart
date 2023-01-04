@@ -1,11 +1,52 @@
 footer {
-  /* position: absolute;
-  bottom: 0;
-  left: 0; */
   display: flex;
   justify-content: space-evenly;
   background-color: rgb(73, 124, 219);
   width: 100vw;
   padding: 12px;
+  margin-top: 30px;
+
+  font-size: 12px;
+  color: #d1d8d0;
+
+  div {
+    h2 {
+      font-size: 14px;
+      letter-spacing: 0.039em;
+    } 
+    .input-box {
+      border: none;
+      font-size: 12px;
+    }
+    #submit-btn {
+      font-size: 12px;
+      background-color: rgb(230, 199, 27);
+      color: rgb(24, 23, 22);
+    }
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    :visited {
+      color: #d1d8d0;
+    }
+  }
+
+
+  .site-links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .address {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
 }
   
