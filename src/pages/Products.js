@@ -6,12 +6,6 @@ import ProductsData from '../data/ProductsData';
 function Products() {
   const [pageItems, setPageItems] = useState(ProductsData);
   const [sortOpt, setSortOpt] = useState('');
-  // eslint-disable-next-line no-unused-vars
-  const sortLowFirst = (a, b) => {
-    if (a.price < b.price) return -1;
-    if (a.price > b.price) return 1;
-    return 0;
-  };
 
   const handleChange = (event) => {
     setSortOpt(event.target.value);
@@ -19,23 +13,19 @@ function Products() {
 
   useEffect(() => {
     if (sortOpt === 'high') {
-      setPageItems(pageItems.sort((a, b) => {
-        if (a.price < b.price) return -1;
-        if (a.price > b.price) return 1;
-        return 0;
-      }));
-    } else if (sortOpt === 'low') {
-      setPageItems(pageItems.sort((a, b) => {
-        if (a.price > b.price) return -1;
-        if (a.price < b.price) return 1;
-        return 0;
-      }));
-    } else if (sortOpt === 'new') {
-      setPageItems(pageItems.sort((a, b) => {
-        if (a.date > b.date) return -1;
-        if (a.date < b.date) return 1;
-        return 0;
-      }));
+      const newArr = [...pageItems];
+      const newPg = newArr.sort((a, b) => b.price - a.price);
+      setPageItems(newPg);
+    }
+    if (sortOpt === 'low') {
+      const newArr = [...pageItems];
+      const newPg = newArr.sort((a, b) => a.price - b.price);
+      setPageItems(newPg);
+    }
+    if (sortOpt === 'new') {
+      const newArr = [...pageItems];
+      const newPg = newArr.sort((a, b) => b.date - a.date);
+      setPageItems(newPg);
     }
   }, [sortOpt]);
 
@@ -46,8 +36,8 @@ function Products() {
         <div className="sortby-container">
           <label htmlFor="sortby">
             Sort by:
-            <select name="sortby" onChange={(e) => handleChange(e)}>
-              <option selected disabled hidden value=""> Select option</option>
+            <select name="sortby" defaultValue="" onChange={(e) => handleChange(e)}>
+              <option disabled hidden value=""> Select option</option>
               <option value="low">Lowest Price</option>
               <option value="high">Highest Price</option>
               <option value="new">Newest</option>
@@ -60,13 +50,13 @@ function Products() {
         className="product-tile"
       >
         {
-          pageItems.map((el) => (
+          pageItems?.map((el) => (
             <Link
               to={`/products/${el.id}`}
               state={el}
+              key={el.id}
             >
               <Item
-                key={el.id}
                 src={el.pic[0]}
                 alt={el.alt[0]}
                 name={el.name}
@@ -75,7 +65,7 @@ function Products() {
               />
             </Link>
           ))
-        }
+          }
       </div>
     </div>
   );

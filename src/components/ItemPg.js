@@ -25,7 +25,8 @@ export default function ItemPg({ addItem }) {
         </p>
         <input
           type="number"
-          placeholder="quantity"
+          defaultValue="1"
+          min={1}
           ref={ref}
         />
         <button
