@@ -11,12 +11,12 @@ export default function Cart({
     setSubTotPrice(cart.reduce((p, c) => p + (c.itm.price * c.qty), 0));
   });
   return cart.length > 0 ? (
-    <div>
+    <div className="cart-page">
       <h1> your cart </h1>
       <div
-        className="cart-item"
+        className="cart-item header"
       >
-        <span> Item </span>
+        <span className="max-width"> Item </span>
         <span className="title"> Title </span>
         <span> Price </span>
         <span> Quantity </span>
@@ -40,12 +40,13 @@ export default function Cart({
             <span className="title">
               {item.itm.name}
             </span>
-            <span>
+            <span className="extra-pad">
               {(item.itm.price).toFixed(2)}
             </span>
-            <span>
+            <span className="extra-pad">
               <button
                 type="button"
+                className="change-qty"
                 onClick={() => decreaseQty(item.itm.name)}
               >
                 -
@@ -53,16 +54,18 @@ export default function Cart({
               {item.qty}
               <button
                 type="button"
+                className="change-qty"
                 onClick={() => increaseQty(item.itm.name)}
               >
                 +
               </button>
             </span>
-            <span>
+            <span className="extra-pad">
               {(Math.round(item.itm.price * item.qty * 100) / 100).toFixed(2)}
             </span>
             <button
               type="button"
+              className="remove"
               onClick={() => removeItem(item.itm.name)}
             >
               remove

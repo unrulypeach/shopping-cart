@@ -6,9 +6,18 @@ import ProductsData from '../data/ProductsData';
 function Products() {
   const [pageItems, setPageItems] = useState(ProductsData);
   const [sortOpt, setSortOpt] = useState('');
+  const [filterTitles, setFilterTitles] = useState([]);
 
   const handleChange = (event) => {
     setSortOpt(event.target.value);
+  };
+
+  const setFilterTitlesFn = () => {
+    const filterArray = [];
+    ProductsData.forEach((el) => {
+      filterArray.push(el.genre);
+    });
+    // return [...new Set(filterArray)];
   };
 
   useEffect(() => {
@@ -29,6 +38,10 @@ function Products() {
     }
   }, [sortOpt]);
 
+  useEffect(() => {
+    setFilterTitles(setFilterTitlesFn());
+  }, []);
+
   return (
     <div className="product-page">
       <div>
@@ -45,7 +58,9 @@ function Products() {
           </label>
         </div>
       </div>
-
+      <div className="filter-products">
+        {filterTitles?.map((el) => <li>{el}</li>)}
+      </div>
       <div
         className="product-tile"
       >
