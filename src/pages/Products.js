@@ -6,6 +6,7 @@ import ProductsData from '../data/ProductsData';
 function Products() {
   const [pageItems, setPageItems] = useState(ProductsData);
   const [sortOpt, setSortOpt] = useState('');
+  // eslint-disable-next-line no-unused-vars
   const [filterTitles, setFilterTitles] = useState([]);
 
   const handleChange = (event) => {
@@ -44,26 +45,26 @@ function Products() {
 
   return (
     <div className="product-page">
-      <div>
-        <h1> Music </h1>
-        <div className="sortby-container">
-          <label htmlFor="sortby">
-            Sort by:
-            <select name="sortby" defaultValue="" onChange={(e) => handleChange(e)}>
-              <option disabled hidden value=""> Select option</option>
-              <option value="low">Lowest Price</option>
-              <option value="high">Highest Price</option>
-              <option value="new">Newest</option>
-            </select>
-          </label>
-        </div>
-      </div>
-      <div className="filter-products">
-        {filterTitles?.map((el) => <li>{el}</li>)}
-      </div>
       <div
         className="product-tile"
       >
+        <div className="product-title">
+          <h1> Music </h1>
+          <div className="sortby-container">
+            <label htmlFor="sortby">
+              Sort by:
+              <select name="sortby" defaultValue="" onChange={(e) => handleChange(e)}>
+                <option disabled hidden value=""> Select option</option>
+                <option value="low">Lowest Price</option>
+                <option value="high">Highest Price</option>
+                <option value="new">Newest</option>
+              </select>
+            </label>
+          </div>
+        </div>
+        {/* <div className="filter-products">
+          {filterTitles?.map((el) => <li>{el}</li>)}
+        </div> */}
         {
           pageItems?.map((el) => (
             <Link

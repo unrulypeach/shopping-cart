@@ -6,6 +6,7 @@
   background-repeat: no-repeat;
   background-position: center center;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -33,7 +34,7 @@ body {
     input, textarea {
       background-color: rgba(255, 255, 255, 0.7);
       margin-top: 10px;
-      width: 25vw;
+      width: 30vw;
     }
 
     textarea {
@@ -46,6 +47,16 @@ body {
       margin-top: 10px;
       border: none;
       background-color: #D4A9A0;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .bg-overlay{
+    form {
+      input, textarea {
+        width: 60vw;
+      }
     }
   }
 }
@@ -66,9 +77,42 @@ body {
 }
 
 .about-pic {
-  @extend %bg-img
+  @extend %bg-img;
+
+  .header-bg{
+    background-color: rgba(0, 0, 0, 0.4);
+  }  
+
+  .about-text-container {
+    text-align: center;
+  }
+
+  h1 {
+    padding: 5vh 0;
+    font-size: 48px;
+    margin: 0;
+    color: white;
+  }
+  
+  span {
+    display: table;
+    margin: 5vh auto;
+    padding: 10vh 4vw;
+    display: block;
+    background-color: #D4A9A0;
+    width: 50vw;
+    border-radius: 20px
+  }
+}
+
+@media (max-width: 480px) {
+  .about-pic {
+    span {
+      padding: 5vh 4vw;
+    }
+  }
 }
 
 .contact-pic {
-  @extend %bg-img
+  @extend %bg-img;
 }

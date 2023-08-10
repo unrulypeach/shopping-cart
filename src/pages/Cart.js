@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import React, { useEffect, useState } from 'react';
-// import { Link } from 'react-router-dom';
 
 export default function Cart({
   cart, removeItem, increaseQty, decreaseQty,
@@ -12,87 +11,96 @@ export default function Cart({
   });
   return cart.length > 0 ? (
     <div className="cart-page">
-      <h1> your cart </h1>
-      <div
-        className="cart-item header"
-      >
-        <span className="max-width"> Item </span>
-        <span className="title"> Title </span>
-        <span> Price </span>
-        <span> Quantity </span>
-        <span> Cost </span>
-        <div> Remove </div>
+      <div className="cart-items-list">
+        <h1> My Bag </h1>
+        <div className="cart-content">
+          {cart.map((item) => (
+            <div className="cart-item" key={item.itm.id}>
+              <div className="left-pic-container">
+                <img
+                  src={item.itm.pic[0]}
+                  alt={item.itm.alt[0]}
+                />
+              </div>
+              <div className="right-info-container">
+                <div className="top">
+                  <div className="inner-top-title">
+                    <span className="title">
+                      {item.itm.name}
+                    </span>
+                  </div>
+                  <div className="inner-bottom">
+                    <div className="title-and-num">
+                      <span className="hidden-on-mobile">Item Price</span>
+                      <span className="cost-float-right">
+                        {(item.itm.price).toFixed(2)}
+                      </span>
+                    </div>
+                    <div className="title-and-num change-on-mobile">
+                      <span className="cente hidden-on-mobile">Quantity</span>
+                      <span className="change-qty">
+                        <button
+                          type="button"
+                          className="change-qty decrease-qty"
+                          onClick={() => decreaseQty(item.itm.name)}
+                        >
+                          -
+                        </button>
+                        {item.qty}
+                        <button
+                          type="button"
+                          className="change-qty increase-qty"
+                          onClick={() => increaseQty(item.itm.name)}
+                        >
+                          +
+                        </button>
+                      </span>
+                    </div>
+                    <div className="title-and-num hidden-on-mobile">
+                      <span>Total Price</span>
+                      <span className="cost-float-right">
+                        {(Math.round(item.itm.price * item.qty * 100) / 100).toFixed(2)}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div className="bottom">
+                  <div>
+                    <span>Free Shipping + Returns</span>
+                  </div>
+                  <button
+                    type="button"
+                    className="remove"
+                    onClick={() => removeItem(item.itm.name)}
+                  >
+                    Remove
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-      <div
-        className="cart-content"
-      >
-        {cart.map((item) => (
-          // <Link
-          //   to={`/products/${item.itm.id}`}
-          // >
-          <div className="cart-item" key={item.itm.id}>
-            <img
-              src={item.itm.pic[0]}
-              alt={item.itm.alt[0]}
-              height="75px"
-              width="75px"
-            />
-            <span className="title">
-              {item.itm.name}
-            </span>
-            <span className="extra-pad">
-              {(item.itm.price).toFixed(2)}
-            </span>
-            <span className="extra-pad">
-              <button
-                type="button"
-                className="change-qty"
-                onClick={() => decreaseQty(item.itm.name)}
-              >
-                -
-              </button>
-              {item.qty}
-              <button
-                type="button"
-                className="change-qty"
-                onClick={() => increaseQty(item.itm.name)}
-              >
-                +
-              </button>
-            </span>
-            <span className="extra-pad">
-              {(Math.round(item.itm.price * item.qty * 100) / 100).toFixed(2)}
-            </span>
-            <button
-              type="button"
-              className="remove"
-              onClick={() => removeItem(item.itm.name)}
-            >
-              remove
-            </button>
+      <div className="cart-summary">
+        <h2> Order Summary </h2>
+        <div className="cost-calc">
+          <div className="section">
+            <span> Subtotal: </span>
+            <span>{(Math.round(subTotPrice * 100) / 100).toFixed(2)}</span>
           </div>
-          // </Link>
-        ))}
-      </div>
-      <div
-        className="cart-summary"
-      >
-        <h2>
-          subtotal:
-          {(Math.round(subTotPrice * 100) / 100).toFixed(2)}
-        </h2>
-        <h2>
-          Tax:
-          {(Math.round(subTotPrice * 0.13 * 100) / 100).toFixed(2)}
-        </h2>
-        <h2>
-          Total:
-          {(Math.round(subTotPrice * 1.13 * 100) / 100).toFixed(2)}
-        </h2>
+          <div className="section">
+            <span>Tax:</span>
+            <span>{(Math.round(subTotPrice * 0.13 * 100) / 100).toFixed(2)}</span>
+          </div>
+          <div className="section">
+            <span>Total:</span>
+            <span>{(Math.round(subTotPrice * 1.13 * 100) / 100).toFixed(2)}</span>
+          </div>
+        </div>
         <button
           type="button"
         >
-          Checkout
+          CHECKOUT
         </button>
       </div>
 

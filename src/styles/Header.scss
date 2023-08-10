@@ -6,6 +6,32 @@ header {
   color: white;
   padding: 18px;
 
+  svg {
+    cursor: pointer;
+  }
+
+  .mobileMenu {
+    background-color: black;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    height: fit-content;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+
+    a {
+      padding-top: 4px;
+      padding-left: 18px;
+      padding-bottom: 12px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgb(50, 50, 50);
+      }
+    }
+  }
+
   div {
     a { 
       padding: 4px;
@@ -20,4 +46,15 @@ header {
       }
     }
   }
+}
+
+.cart-item-count {
+  font-size: 12px;
+  background-color: rgba(232, 41, 41, 0.777);
+  padding: 0 4px;
+  border-radius: 100px;
+
+  position: relative;
+  bottom: 15px;
+  right: 10px;
 }
