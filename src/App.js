@@ -84,6 +84,7 @@ function App() {
       <Header qtySum={totalQty} />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/shopping-cart" element={<Home />} />
         <Route path="/products">
           <Route index element={<Products />} />
           <Route path="/products/:id" element={<ItemPg addItem={(itm, qty) => handleAddItem(itm, qty)} />} />
