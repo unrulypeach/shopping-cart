@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/shopping-cart/static/css/main.33c780a1.css",
-    "main.js": "/shopping-cart/static/js/main.5418acbc.js",
+    "main.css": "/shopping-cart/static/css/main.81de2871.css",
+    "main.js": "/shopping-cart/static/js/main.7849db8e.js",
     "static/media/casette-stack.jpg": "/shopping-cart/static/media/casette-stack.4a86940690a1fb96c993.jpg",
     "static/media/casette-one.jpg": "/shopping-cart/static/media/casette-one.fa9502d6d210f5ecefb5.jpg",
     "static/media/homepage.jpg": "/shopping-cart/static/media/homepage.701c80d42b1091746d09.jpg",
@@ -25,11 +25,11 @@
     "static/media/nirvana-bleach-casette.webp": "/shopping-cart/static/media/nirvana-bleach-casette.5ae137797a5f2b99d137.webp",
     "static/media/boh-ceasetobegin-album.webp": "/shopping-cart/static/media/boh-ceasetobegin-album.7964a1869685d9ff1a0d.webp",
     "index.html": "/shopping-cart/index.html",
-    "main.33c780a1.css.map": "/shopping-cart/static/css/main.33c780a1.css.map",
-    "main.5418acbc.js.map": "/shopping-cart/static/js/main.5418acbc.js.map"
+    "main.81de2871.css.map": "/shopping-cart/static/css/main.81de2871.css.map",
+    "main.7849db8e.js.map": "/shopping-cart/static/js/main.7849db8e.js.map"
   },
   "entrypoints": [
-    "static/css/main.33c780a1.css",
-    "static/js/main.5418acbc.js"
+    "static/css/main.81de2871.css",
+    "static/js/main.7849db8e.js"
   ]
 }
