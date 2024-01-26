@@ -1,5 +1,6 @@
 # Cassette Shopping Site
 
+<a href="https://unrulypeach.github.io/shopping-cart/"> View Demo </a>
 An e-commerce site where you can shop for cassettes!
 
 ## Description
