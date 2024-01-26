@@ -1,11 +1,10 @@
 # Cassette Shopping Site
 
 <a href="https://unrulypeach.github.io/shopping-cart/"> View Demo </a>
-An e-commerce site where you can shop for cassettes!
 
 ## Description
 
-A project which uses React Router for a multipage SPA. The app also maintains the state of the shopping cart throughout the shopping experience.
+An e-commerce site where you can shop for cassettes. An app which uses React Router for a multipage SPA. The app also maintains the state of the shopping cart throughout the shopping experience.
 
 ## Getting Started
 
